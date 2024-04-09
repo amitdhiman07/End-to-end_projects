@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='background.jpg') }}');">
+    <div class="container">
+        <header>
+            <h1>Diabetes Prediction</h1>
+            <p>Welcome to our diabetes prediction tool.</p>
+            <p>This tool uses machine learning to predict whether a person has diabetes based on their glucose level, BMI, and age.</p>
+        </header>
+        <form action="/predict" method="post">
+            <label for="glucose">Glucose:</label><br>
+            <input type="text" id="glucose" name="glucose"><br>
+            <label for="bmi">BMI:</label><br>
+            <input type="text" id="bmi" name="bmi"><br>
+            <label for="age">Age:</label><br>
+            <input type="text" id="age" name="age"><br><br>
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction_text %}
+        <p>{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
