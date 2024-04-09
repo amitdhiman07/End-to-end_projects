@@ -59,7 +59,7 @@ scikit-learn: A machine learning library for Python.
 pandas: A data manipulation and analysis library for Python.
 These dependencies are listed in the requirements.txt file and can be installed using pip.
 
-6. File Structure <a name="file-structure"></a>
+6. File Structure 
 graphql
 Copy code
 diabetes-detection-web-app/
